@@ -40,7 +40,7 @@ export function NavBar({ className }: NavBarProps) {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <ModeToggle />
+          <ModeToggle className="relative px-4 py-2 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full" />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
