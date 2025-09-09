@@ -1,5 +1,5 @@
 import { NavBar } from "@/components/web/NavBar";
-import Sections from "./Sections";
+import Sections from "./sections";
 
 export default function Home() {
   return (
