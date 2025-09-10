@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./css/globals.css";
 import { ThemeProvider } from "@/components/extra/theme-provider";
+import { NavBar } from "@/components/web/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Forever Young",
-  description: "Viva la gran experiencia de la fiesta, Encuentre las mejores Opciones para su Evento,Fiesta,Reunion.",
+  description:
+    "Viva la gran experiencia de la fiesta, Encuentre las mejores Opciones para su Evento,Fiesta,Reunion.",
   icons: {
     icon: "/web-icon.svg",
     shortcut: "/web-icon.svg",
@@ -38,9 +40,11 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        ></ThemeProvider>
+        <header className="min-w-screenflex justify-center fixed top-0 z-50 backdrop-blur-md shadow-md rounded-b-full">
+          <NavBar className="min-w-screen text-lg px-6 py-4 border-2 rounded-b-full" />
+        </header>
+        <main>{children}</main>
       </body>
     </html>
   );

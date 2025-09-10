@@ -15,8 +15,6 @@ const Loading = () => {
           <span className="animate-ping-dot animation-delay-400">.</span>
         </span>
       </h1>
-
-      {/* Barra de carga linear */}
       <div className="w-2/3 h-1 bg-gray-200 rounded-full overflow-hidden">
         <div className="h-full bg-gray-800 animate-pulse w-full"></div>
       </div>
