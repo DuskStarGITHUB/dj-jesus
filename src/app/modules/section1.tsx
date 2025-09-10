@@ -7,7 +7,7 @@ const Section1 = () => {
     <section className="relative max-h-screen w-full">
       <div className="absolute inset-0 -z-0 flex justify-center items-start overflow-hidden">
         <div className="w-full">
-          <AspectRatio ratio={16 / 9} className="w-full h-full">
+          <AspectRatio ratio={16 / 9} className="w-full min-h-screen">
             <Image
               src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=1600&dpr=2&q=80"
               alt="Background"

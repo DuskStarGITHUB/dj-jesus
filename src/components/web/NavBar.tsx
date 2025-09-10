@@ -13,12 +13,15 @@ import { ModeToggle } from "@/components/extra/mode-toggle";
 
 interface NavBarProps {
   className?: string;
+  textColor?: string;
 }
 
-export function NavBar({ className }: NavBarProps) {
+export function NavBar({ className, textColor = "text-white" }: NavBarProps) {
   return (
     <NavigationMenu className={className} viewport={false}>
-      <NavigationMenuList className="flex items-center gap-4">
+      <NavigationMenuList
+        className={`flex items-center gap-2 sm:gap-14 ${textColor}`}
+      >
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/">Inicio</Link>
