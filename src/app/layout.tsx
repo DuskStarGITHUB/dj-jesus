@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Forever Young",
   description:
-    "Viva la gran experiencia de la fiesta, Encuentre las mejores Opciones para su Evento,Fiesta,Reunion.",
+    "Vive la gran experiencia de la fiesta, Encuentre las mejores Opciones para su Eventos,Fiestas y Reuniones.",
   icons: {
     icon: "/web-icon.svg",
     shortcut: "/web-icon.svg",
@@ -27,24 +27,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        ></ThemeProvider>
-        <header className="min-w-screenflex justify-center fixed top-0 z-50 backdrop-blur-md shadow-md rounded-b-full">
-          <NavBar className="min-w-screen text-lg px-6 py-4 border-2 rounded-b-full" />
-        </header>
-        <main>{children}</main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <header className="min-w-screen flex justify-center fixed top-0 z-50 backdrop-blur-md shadow-md rounded-b-full">
+            <NavBar className="min-w-screen text-lg px-6 py-4 border-2 rounded-b-full" />
+          </header>
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
