@@ -21,8 +21,11 @@ const Section1 = () => {
         <div className="w-1/2 flex items-center justify-center p-4 relative">
           <MainImage />
         </div>
-        <div className="w-1/2 flex items-center justify-center p-8">
-          <p className="max-w-md text-lg leading-relaxed text-justify">
+        <div className="w-1/2 flex flex-col items-center justify-center p-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold sm:pb-10 text-center">
+            DJ Jesus Pulido
+          </h1>
+          <p className="max-w-md text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-justify">
             <span className="font-bold">
               Vive La Gran Experiencia De La Fiesta
             </span>
