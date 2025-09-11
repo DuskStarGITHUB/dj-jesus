@@ -36,10 +36,10 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <header className="min-w-screen flex justify-center fixed top-0 z-50 rounded-b-full shadow-md">
             <div className="absolute inset-0 backdrop-blur-md backdrop-invert -z-10 rounded-b-full" />
-            <div className="absolute inset-0 bg-accent-foreground opacity-50 -z-10 rounded-b-full" />
+            <div className="absolute inset-0 bg-accent-foreground opacity-50 -z-10 rounded-b-full dark:bg-black dark:opacity-0.1" />
             <NavBar
               className="min-w-screen text-lg px-1 py-4 border-2 rounded-b-full relative z-10"
-              textColor="text-white dark:text-black"
+              textColor="text-white"
             />
           </header>
           <main>{children}</main>
