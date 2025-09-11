@@ -59,11 +59,13 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group relative inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-current " +
+  "group relative inline-flex h-8 sm:h-9 w-auto sm:w-max items-center justify-center rounded-md px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium text-current " +
     "disabled:pointer-events-none disabled:opacity-50 outline-none transition-colors " +
     "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 " +
-    "hover:after:w-full focus-visible:ring-0"
+    "sm:hover:after:w-full focus-visible:ring-0"
 );
+
+
 
 function NavigationMenuTrigger({
   className,

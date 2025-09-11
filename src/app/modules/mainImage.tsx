@@ -1,11 +1,7 @@
 const MainImage = () => {
   const masks = [
     { src: "/photos/1.png", translate: 0, opacity: 0.2 },
-    { src: "/photos/1.png", translate: 1, opacity: 0.5 },
-    { src: "/photos/3.png", translate: 0, opacity: 0.2 },
-    { src: "/photos/3.png", translate: 1, opacity: 0.5 },
-    { src: "/photos/1.png", translate: 3, opacity: 0.5 },
-    { src: "/photos/3.png", translate: 3, opacity: 0.5 },
+    { src: "/photos/1.png", translate: 1, opacity: 0.9 },
   ];
   const blurLayers = 7;
   return (
@@ -29,7 +25,7 @@ const MainImage = () => {
           style={{
             backgroundImage: `url('/photos/3.png')`,
             filter: "blur(12px)",
-            opacity: 0.7,
+            opacity: 0.5,
           }}
         />
       ))}
