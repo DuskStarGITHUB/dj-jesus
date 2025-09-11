@@ -7,9 +7,7 @@ const MainImage = () => {
     { src: "/photos/1.png", translate: 3, opacity: 0.5 },
     { src: "/photos/3.png", translate: 3, opacity: 0.5 },
   ];
-
   const blurLayers = 7;
-
   return (
     <div className="relative w-full h-full">
       {masks.map((mask, index) => (
@@ -24,7 +22,6 @@ const MainImage = () => {
           }}
         />
       ))}
-
       {Array.from({ length: blurLayers }).map((_, index) => (
         <div
           key={`blur-${index}`}
