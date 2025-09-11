@@ -24,7 +24,7 @@ export const works: Artwork[] = [
 
 export function ArtworkCards() {
   return (
-    <div className="hidden sm:flex justify-center gap-2 sm:gap-4 p-4 bg-gray-100 dark:bg-accent border-black border-2 overflow-x-auto">
+    <div className="hidden sm:flex justify-center gap-2 sm:gap-4 p-4 bg-gray-100 dark:bg-accent border-t border-b border-black dark:border-white overflow-x-auto">
       <div className="flex flex-row flex-nowrap gap-2 xl:gap-20 2xl:gap-50">
         {works.map((artwork) => (
           <Card
