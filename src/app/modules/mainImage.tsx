@@ -1,49 +1,41 @@
 const MainImage = () => {
+  const masks = [
+    { src: "/photos/1.png", translate: 0, opacity: 0.2 },
+    { src: "/photos/1.png", translate: 1, opacity: 0.5 },
+    { src: "/photos/3.png", translate: 0, opacity: 0.2 },
+    { src: "/photos/3.png", translate: 1, opacity: 0.5 },
+    { src: "/photos/1.png", translate: 3, opacity: 0.5 },
+    { src: "/photos/3.png", translate: 3, opacity: 0.5 },
+  ];
+
+  const blurLayers = 7;
+
   return (
     <div className="relative w-full h-full">
-      <div className="absolute inset-0 bg-black/90 dark:bg-white/90 mask-[url(/photos/1.png)] mask-center mask-cover opacity-20" />
-      <div className="absolute inset-0 bg-black/90 dark:bg-white/90 mask-[url(/photos/1.png)] mask-center mask-cover translate-x-1 opacity-50" />
-      <div className="absolute inset-0 bg-black/90 dark:bg-white/90 mask-[url(/photos/3.png)] mask-center mask-cover opacity-20" />
-      <div className="absolute inset-0 bg-black/90 dark:bg-white/90 mask-[url(/photos/3.png)] mask-center mask-cover translate-x-1 opacity-50" />
-      <div className="absolute inset-0 bg-black/90 dark:bg-white/90 mask-[url(/photos/1.png)] mask-center mask-cover opacity-20" />
-      <div className="absolute inset-0 bg-black/90 dark:bg-white/90 mask-[url(/photos/1.png)] mask-center mask-cover translate-x-3 opacity-50" />
-      <div className="absolute inset-0 bg-black/90 dark:bg-white/90 mask-[url(/photos/3.png)] mask-center mask-cover opacity-20" />
-      <div className="absolute inset-0 bg-black/90 dark:bg-white/90 mask-[url(/photos/3.png)] mask-center mask-cover translate-x-3 opacity-50" />
-      <div
-        className="absolute inset-0 
-                bg-[url('/photos/3.png')] bg-center bg-cover
-                [filter:blur(12px)] opacity-70"
-      />
-      <div
-        className="absolute inset-0 
-                bg-[url('/photos/3.png')] bg-center bg-cover
-                [filter:blur(12px)] opacity-70"
-      />
-      <div
-        className="absolute inset-0 
-                bg-[url('/photos/3.png')] bg-center bg-cover
-                [filter:blur(12px)] opacity-70"
-      />
-      <div
-        className="absolute inset-0 
-                bg-[url('/photos/3.png')] bg-center bg-cover
-                [filter:blur(12px)] opacity-70"
-      />
-      <div
-        className="absolute inset-0 
-                bg-[url('/photos/3.png')] bg-center bg-cover
-                [filter:blur(12px)] opacity-70"
-      />
-      <div
-        className="absolute inset-0 
-                bg-[url('/photos/3.png')] bg-center bg-cover
-                [filter:blur(12px)] opacity-70"
-      />
-      <div
-        className="absolute inset-0 
-                bg-[url('/photos/3.png')] bg-center bg-cover
-                [filter:blur(12px)] opacity-70"
-      />
+      {masks.map((mask, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 bg-black/90 dark:bg-white/90 mask-center mask-cover"
+          style={{
+            maskImage: `url(${mask.src})`,
+            WebkitMaskImage: `url(${mask.src})`,
+            transform: `translateX(${mask.translate}px)`,
+            opacity: mask.opacity,
+          }}
+        />
+      ))}
+
+      {Array.from({ length: blurLayers }).map((_, index) => (
+        <div
+          key={`blur-${index}`}
+          className="absolute inset-0 bg-center bg-cover"
+          style={{
+            backgroundImage: `url('/photos/3.png')`,
+            filter: "blur(12px)",
+            opacity: 0.7,
+          }}
+        />
+      ))}
     </div>
   );
 };
