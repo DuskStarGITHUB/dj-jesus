@@ -16,3 +16,17 @@
   animation-delay: 0.4s;
 }
 
+
+@keyframes slide-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.border-animated {
+  background-size: 200% 200%;
+  animation: slide-border 4s linear infinite;
+}

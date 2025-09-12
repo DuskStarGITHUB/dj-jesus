@@ -24,25 +24,27 @@ export const works: Artwork[] = [
 
 export function ArtworkCards() {
   return (
-    <div className="hidden sm:flex justify-center gap-2 sm:gap-4 p-4 bg-gray-100 dark:bg-accent border-t border-b border-black dark:border-white overflow-x-auto">
-      <div className="flex flex-row flex-nowrap gap-2 xl:gap-20 2xl:gap-50">
+    <div className="relative hidden sm:flex justify-center px-6 py-8 bg-gradient-to-r from-gray-100 via-white to-gray-100 dark:from-accent dark:via-background dark:to-accent overflow-x-auto">
+      <span className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-black/100 to-transparent dark:via-white/60 border-animated" />
+      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-black/100 to-transparent dark:via-white/60 border-animated" />
+      <div className="flex flex-row flex-nowrap gap-6 xl:gap-16 snap-x snap-mandatory">
         {works.map((artwork) => (
           <Card
             key={artwork.text}
-            className="flex flex-row items-center w-28 md:w-70 h-17 sm:h-28 md:h-32 flex-shrink-0"
+            className="flex flex-row items-center w-40 md:w-60 lg:w-72 h-28 md:h-36 flex-shrink-0 snap-center transition-transform transform hover:scale-105 hover:shadow-lg"
           >
-            <CardContent className="flex items-center justify-center gap-2 w-full p-2">
-              <div className="w-12 h-12 md:w-24 md:h-24 rounded-full overflow-hidden flex-shrink-0">
+            <CardContent className="flex items-center justify-center gap-3 w-full p-3">
+              <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden flex-shrink-0">
                 <Image
                   src={artwork.art}
-                  alt={`Photo by ${artwork.text}`}
+                  alt={`Photo of ${artwork.text}`}
                   width={96}
                   height={96}
                   className="object-cover aspect-square"
                 />
               </div>
               <div className="flex-1 flex items-center justify-center">
-                <p className="text-[7px] md:text-base font-semibold text-center">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-center">
                   {artwork.text}
                 </p>
               </div>

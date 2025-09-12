@@ -25,13 +25,13 @@ const Section1 = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold sm:pb-6 md:pb-10">
             DJ Jesus Pulido
           </h1>
-          <p className="max-w-md text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-            <span className="font-bold">
-              Vive La Gran Experiencia De La Fiesta
-            </span>
-            , Encuentra las mejores opciones para tus eventos, fiestas y
-            reuniones...
-          </p>
+            <p className="max-w-md text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+              <span className="font-bold">
+                Vive La Gran Experiencia De La Fiesta
+              </span>
+              , Encuentra las mejores opciones para tus eventos, fiestas y
+              reuniones...
+            </p>
         </div>
       </div>
     </section>
