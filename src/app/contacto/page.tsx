@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -8,7 +8,12 @@ import { Calendar } from "@/components/ui/calendar";
 import "../css/contact.css";
 
 export default function PageContacto() {
+  const [message, setMessage] = useState("");
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>();
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -23,6 +28,16 @@ export default function PageContacto() {
       .forEach((el) => observer.observe(el));
   }, []);
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    if (selectedDate) {
+      const dateString = selectedDate.toISOString().split("T")[0];
+      const textarea =
+        e.currentTarget.querySelector<HTMLTextAreaElement>("#body");
+      if (textarea)
+        textarea.value = `Fecha: ${dateString}\n\nMensaje:\n${textarea.value}`;
+    }
+  };
+
   return (
     <div className="px-4 md:px-16 pt-12 md:pt-20">
       <section className="scroll-animate opacity-0 py-12 text-center">
@@ -34,6 +49,7 @@ export default function PageContacto() {
           action="https://formsubmit.co/contactspeencer@gmail.com"
           method="POST"
           className="flex flex-col gap-6"
+          onSubmit={handleSubmit}
         >
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 flex flex-col gap-2">
@@ -62,14 +78,24 @@ export default function PageContacto() {
             <Input id="subject" type="text" name="subject" placeholder="Tema" />
           </div>
           <div className="flex flex-col gap-2">
-            <Label htmlFor="body">Mensaje y Fecha</Label>
+            <Label>Mensaje</Label>
             <Textarea
               id="body"
               name="comments"
               placeholder="Escribe tu mensaje aquí..."
               className="min-h-[150px] p-4 text-center"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
-            <Calendar id="date" className="mt-4 w-full" />
+            <Label>Reservar Fecha</Label>
+            {mounted && (
+              <Calendar
+                mode="single"
+                selected={selectedDate}
+                onSelect={setSelectedDate}
+                className="mt-4 w-full"
+              />
+            )}
           </div>
           <Button type="submit" className="mt-4 md:w-40 self-center">
             Enviar
