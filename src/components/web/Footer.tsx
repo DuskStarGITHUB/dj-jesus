@@ -55,10 +55,7 @@ const Footer = () => {
             className="rounded-full hover:scale-110 transition h-9 w-9"
             asChild
           >
-            <a
-              href="https://www.facebook.com/jesus.pulido.52493"
-              target="_blank"
-            >
+            <a href="https://www.facebook.com/dmx.jesus.pulido" target="_blank">
               <Facebook className="h-4 w-4" />
             </a>
           </Button>
