@@ -1,0 +1,108 @@
+"use client";
+import { useEffect } from "react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Calendar } from "@/components/ui/calendar";
+import "../css/contact.css";
+
+export default function PageContacto() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting)
+            entry.target.classList.add("animate-fadeInUp");
+        });
+      },
+      { threshold: 0.1 }
+    );
+    document
+      .querySelectorAll(".scroll-animate")
+      .forEach((el) => observer.observe(el));
+  }, []);
+
+  return (
+    <div className="px-4 md:px-16 pt-12 md:pt-20">
+      <section className="scroll-animate opacity-0 py-12 text-center">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">Contacto</h1>
+      </section>
+      <section className="scroll-animate opacity-0 py-0 max-w-3xl mx-auto">
+        <form
+          id="myForm"
+          action="https://formsubmit.co/contactspeencer@gmail.com"
+          method="POST"
+          className="flex flex-col gap-6"
+        >
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1 flex flex-col gap-2">
+              <Label htmlFor="name">Nombre</Label>
+              <Input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Nombre"
+                required
+              />
+            </div>
+            <div className="flex-1 flex flex-col gap-2">
+              <Label htmlFor="email">Correo</Label>
+              <Input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Correo"
+                required
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <Label htmlFor="subject">Tema</Label>
+            <Input id="subject" type="text" name="subject" placeholder="Tema" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <Label htmlFor="body">Mensaje y Fecha</Label>
+            <Textarea
+              id="body"
+              name="comments"
+              placeholder="Escribe tu mensaje aquí..."
+              className="min-h-[150px] p-4 text-center"
+            />
+            <Calendar id="date" className="mt-4 w-full" />
+          </div>
+          <Button type="submit" className="mt-4 md:w-40 self-center">
+            Enviar
+          </Button>
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Formulario enviado correctamente. Pronto recibirás respuesta."
+          />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nuevo Formulario recibido!"
+          />
+          <input type="hidden" name="_replyto" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://duskstargithub.github.io/"
+          />
+        </form>
+      </section>
+      <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-center mt-8">
+        Para cualquier información o consulta, por favor lea nuestros{" "}
+        <strong>
+          <a href="/terms-of-service" className="underline">
+            términos de uso
+          </a>
+        </strong>
+        .
+      </p>
+    </div>
+  );
+}
