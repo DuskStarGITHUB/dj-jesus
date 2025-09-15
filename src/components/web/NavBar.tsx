@@ -39,7 +39,7 @@ export function NavBar({ className, textColor = "text-white" }: NavBarProps) {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/blog">Blog</Link>
+            <Link href="/redes">Redes</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>

@@ -1,8 +1,7 @@
-// app/components/footer.tsx
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Github, Twitter, Mail, Music } from "lucide-react";
+import { Video, Facebook, Instagram, Music } from "lucide-react";
 import { Bebas_Neue, Roboto } from "next/font/google";
 
 const bebas = Bebas_Neue({ weight: "400", subsets: ["latin"] });
@@ -43,8 +42,11 @@ const Footer = () => {
             className="rounded-full hover:scale-110 transition h-9 w-9"
             asChild
           >
-            <a href="https://github.com">
-              <Github className="h-4 w-4" />
+            <a
+              href="https://www.tiktok.com/@jesuspulido875?is_from_webapp=1&sender_device=pc"
+              target="_blank"
+            >
+              <Video className="h-4 w-4" />
             </a>
           </Button>
           <Button
@@ -53,8 +55,11 @@ const Footer = () => {
             className="rounded-full hover:scale-110 transition h-9 w-9"
             asChild
           >
-            <a href="https://twitter.com">
-              <Twitter className="h-4 w-4" />
+            <a
+              href="https://www.facebook.com/jesus.pulido.52493"
+              target="_blank"
+            >
+              <Facebook className="h-4 w-4" />
             </a>
           </Button>
           <Button
@@ -63,8 +68,11 @@ const Footer = () => {
             className="rounded-full hover:scale-110 transition h-9 w-9"
             asChild
           >
-            <a href="mailto:correo@ejemplo.com">
-              <Mail className="h-4 w-4" />
+            <a
+              href="https://www.instagram.com/djjesuspulidodmx/"
+              target="_blank"
+            >
+              <Instagram className="h-4 w-4" />
             </a>
           </Button>
         </div>

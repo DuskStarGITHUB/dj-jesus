@@ -3,7 +3,6 @@
 import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -13,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 interface ModeToggleProps {
-  className?: string; // ahora acepta className opcional
+  className?: string;
 }
 
 export function ModeToggle({ className }: ModeToggleProps) {
