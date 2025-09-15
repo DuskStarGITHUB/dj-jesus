@@ -33,19 +33,31 @@ export function Accord({
       <AccordionItem value="item-1">
         <AccordionTrigger>Sobre Mi</AccordionTrigger>
         <AccordionContent>
-          <p>Descp.</p>
+          <p>
+            Naciendo en la epoca de los 70/80's, Adquiri un gusto musical en
+            español e ingles, Desde siempre, me llamo la atencion, Integrar e
+            Combinar diferentes generos musicales, Admirando la cultura de la
+            mezcla con vinilos y implementacion de equipo de DJ.
+          </p>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger>Colaboraciones</AccordionTrigger>
         <AccordionContent>
-          <p>Descp.</p>
+          <ul>
+            <li>DJ RomixSaurio || CDMX, Alternando Cabina / D.C 90's.</li>
+          </ul>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
         <AccordionTrigger>Experiencia</AccordionTrigger>
         <AccordionContent>
-          <p>Descp.</p>
+          <p>
+            En los 90's tuve mi sonido nombrado DenverMix, Actualmente Tengo mi
+            propio equipo de Audio,Sonido,Iluminacion y Video en las CDMX para
+            Eventos Sociales a los que e asistido e Versatiles, Me especializo
+            en fiestas tematicas de los años 80/90's.
+          </p>
         </AccordionContent>
       </AccordionItem>
     </Accordion>

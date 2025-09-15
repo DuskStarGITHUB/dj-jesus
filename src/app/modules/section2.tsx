@@ -30,7 +30,7 @@ const Section2 = () => {
           "
         />
       </div>
-      <div className="w-1/2 flex flex-col items-center justify-center p-12 border-t border-r border-b">
+      <div className="max-w-1/2 min-w-1/2 flex flex-col items-center justify-center p-12 border-t border-r border-b">
         <h2 className="text-4xl font-bold mb-8">Conoceme</h2>
         <Accord setActiveImage={setActiveImage} />
       </div>
