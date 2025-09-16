@@ -10,13 +10,11 @@ const Presentation = ({ onDisappear }: { onDisappear?: () => void }) => {
     satisfaction: 0,
   });
   const [visible, setVisible] = useState(true);
-
   const metrics = [
     { label: "Eventos", value: 127, suffix: "+" },
     { label: "Años de Experiencia", value: 15, suffix: "+" },
     { label: "Client Satisfaction", value: 100, suffix: "%" },
   ];
-
   useEffect(() => {
     const interval = setInterval(
       () => setCurrentMetric((prev) => (prev + 1) % metrics.length),
@@ -41,20 +39,25 @@ const Presentation = ({ onDisappear }: { onDisappear?: () => void }) => {
     }, duration / steps);
     return () => clearInterval(timer);
   }, []);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       if (!visible) return;
       const twoVh = window.innerHeight * 0.02;
       if (window.scrollY > twoVh) {
+        const currentScroll = window.scrollY;
         setVisible(false);
-        if (onDisappear) onDisappear();
+        requestAnimationFrame(() => {
+          window.scrollTo({ top: currentScroll - twoVh, behavior: "smooth" });
+          if (onDisappear) onDisappear();
+        });
       }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [visible, onDisappear]);
-
   return (
     <AnimatePresence>
       {visible && (
@@ -92,9 +95,9 @@ const Presentation = ({ onDisappear }: { onDisappear?: () => void }) => {
                 <span className="block text-primary">Musica que se Siente</span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Professional DJ services that unite all ages on the dance floor
-                with the perfect mix of classics, current hits, and everything
-                in between.
+                Servicios profesionales de DJ que unen a todas las edades en la
+                pista de baile, con la mezcla perfecta de clásicos, éxitos
+                actuales y todo lo que hay entre medio..
               </p>
             </motion.div>
             <motion.div
