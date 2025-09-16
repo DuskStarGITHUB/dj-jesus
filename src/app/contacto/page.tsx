@@ -12,7 +12,6 @@ export default function PageContacto() {
   const [message, setMessage] = useState("");
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
   const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
     setMounted(true);
     const observer = new IntersectionObserver(
@@ -28,15 +27,33 @@ export default function PageContacto() {
       .querySelectorAll(".scroll-animate")
       .forEach((el) => observer.observe(el));
   }, []);
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    if (selectedDate) {
-      const dateString = selectedDate.toISOString().split("T")[0];
-      const textarea =
-        e.currentTarget.querySelector<HTMLTextAreaElement>("#body");
-      if (textarea)
-        textarea.value = `Fecha solicitada: ${dateString}\n\nMensaje:\n${textarea.value}`;
+    if (!selectedDate) {
+      e.preventDefault();
+      alert("Por favor selecciona una fecha antes de enviar.");
+      return;
     }
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const minDate = new Date();
+    minDate.setDate(today.getDate() + 14);
+    if (selectedDate <= today) {
+      e.preventDefault();
+      alert("La fecha no puede ser hoy ni un día anterior.");
+      return;
+    }
+    if (selectedDate < minDate) {
+      e.preventDefault();
+      alert(
+        "Debes seleccionar una fecha con al menos 2 semanas de anticipación."
+      );
+      return;
+    }
+    const dateString = selectedDate.toISOString().split("T")[0];
+    const textarea =
+      e.currentTarget.querySelector<HTMLTextAreaElement>("#body");
+    if (textarea)
+      textarea.value = `Fecha solicitada: ${dateString}\n\nMensaje:\n${textarea.value}`;
   };
 
   return (
