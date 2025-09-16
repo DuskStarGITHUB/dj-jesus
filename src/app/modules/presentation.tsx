@@ -12,7 +12,7 @@ const Presentation = ({ onDisappear }: { onDisappear?: () => void }) => {
   const [visible, setVisible] = useState(true);
   const metrics = [
     { label: "Eventos", value: 127, suffix: "+" },
-    { label: "Años de Experiencia", value: 15, suffix: "+" },
+    { label: "Años de Experiencia", value: 25, suffix: "+" },
     { label: "Client Satisfaction", value: 100, suffix: "%" },
   ];
   useEffect(() => {
@@ -32,7 +32,7 @@ const Presentation = ({ onDisappear }: { onDisappear?: () => void }) => {
       const progress = step / steps;
       setAnimatedCounts({
         events: Math.floor(127 * progress),
-        years: Math.floor(15 * progress),
+        years: Math.floor(25 * progress),
         satisfaction: Math.floor(98 * progress),
       });
       if (step >= steps) clearInterval(timer);

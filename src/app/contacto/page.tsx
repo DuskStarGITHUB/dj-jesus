@@ -55,7 +55,6 @@ export default function PageContacto() {
     if (textarea)
       textarea.value = `Fecha solicitada: ${dateString}\n\nMensaje:\n${textarea.value}`;
   };
-
   return (
     <div className="px-4 md:px-16 pt-12 md:pt-20">
       <section className="scroll-animate opacity-0 py-12 text-center">
@@ -190,7 +189,7 @@ export default function PageContacto() {
         </div>
       </section>
 
-      <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-center mt-8">
+      <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-center mt-8 h-20">
         Para cualquier información o consulta, por favor lea nuestros{" "}
         <strong>
           <a href="/terms-of-service" className="underline">

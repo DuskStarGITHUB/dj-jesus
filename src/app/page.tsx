@@ -1,4 +1,3 @@
-// page.tsx
 "use client";
 import { useState, useEffect } from "react";
 import Section1 from "./modules/section1";
