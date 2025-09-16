@@ -4,7 +4,6 @@ import { Accord } from "./accordion";
 
 const Section2 = () => {
   const [activeImage, setActiveImage] = useState("/photos/2.jpeg");
-
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row text-white">
       <div
@@ -21,15 +20,15 @@ const Section2 = () => {
           src={activeImage}
           alt="Imagen acordeón"
           className="
-            grayscale 
-            rounded-3xl 
-            shadow-2xl 
-            object-cover 
-            w-full 
-            max-w-[400px] 
-            aspect-square 
-            border
-          "
+    grayscale
+    rounded-3xl
+    shadow-2xl
+    object-cover
+    w-full
+    max-w-[250px] sm:max-w-[300px] md:max-w-[400px]
+    aspect-square
+    border
+  "
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-6 md:p-12 border-t border-r border-b">
