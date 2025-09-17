@@ -97,7 +97,7 @@ export default function PageCopyright() {
           <p className="mb-4">
             Para solicitar permisos de uso, reproducción o distribución de
             contenido del sitio, contacta a Jesús Pulido en:{" "}
-            <strong>copyright@jesuspulido.com</strong>
+            <strong>forever.young.djmx@gmail.com</strong>
           </p>
           <p>
             Todas las solicitudes serán revisadas y requerirán autorización

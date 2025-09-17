@@ -31,8 +31,8 @@ export default function PageRedes() {
   const contactInfo = [
     {
       icon: "Mail",
-      text: "jesus@foreveryoungdj.com",
-      href: "mailto:jesus@foreveryoungdj.com",
+      text: "forever.young.djmx@gmail.com",
+      href: "mailto:forever.young.djmx@gmail.com",
     },
   ];
   useEffect(() => {
@@ -116,11 +116,10 @@ export default function PageRedes() {
                 size={20}
                 className="flex-shrink-0 text-accent"
               />
-              <span>{contact.text}</span>
+              <span className="cursor-pointer">{contact.text}</span>
             </button>
           ))}
         </div>
-
         <div className="space-y-6 text-left">
           <h2 className="text-3xl md:text-4xl font-bold">Síguenos y reserva</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -132,7 +131,7 @@ export default function PageRedes() {
               <button
                 key={link.name}
                 onClick={() => handleLinkClick(link.url)}
-                className={`px-4 py-2 rounded-full border border-white/20 hover:bg-primary/10 transition ${link.color}`}
+                className={`px-4 py-2 rounded-full border border-white/20 hover:bg-primary/10 transition ${link.color} cursor-pointer`}
               >
                 {link.name}
               </button>

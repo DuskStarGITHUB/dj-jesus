@@ -70,7 +70,7 @@ export default function PageContacto() {
       <section className="scroll-animate opacity-0 py-0 max-w-3xl mx-auto">
         <form
           id="myForm"
-          action="https://formsubmit.co/contactspeencer@gmail.com"
+          action="https://formsubmit.co/forever.young.djmx@gmail.com"
           method="POST"
           className="flex flex-col gap-6"
           onSubmit={handleSubmit}
@@ -140,7 +140,7 @@ export default function PageContacto() {
           <input
             type="hidden"
             name="_next"
-            value="https://duskstargithub.github.io/"
+            value="http://localhost:3000/contacto"
           />
         </form>
       </section>
@@ -188,7 +188,6 @@ export default function PageContacto() {
           </Button>
         </div>
       </section>
-
       <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-center mt-8 h-20">
         Para cualquier información o consulta, por favor lea nuestros{" "}
         <strong>
