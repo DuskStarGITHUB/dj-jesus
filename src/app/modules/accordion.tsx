@@ -48,7 +48,10 @@ export function Accord({
         </AccordionTrigger>
         <AccordionContent>
           <ul className="list-disc pl-5 space-y-1 text-sm sm:text-inherit leading-relaxed sm:leading-normal">
-            <li>DJ RomixSaurio || CDMX, Alternando Cabina / D.C 90&apos;s.</li>
+            <li>
+              DJ RomixSaurio || CDMX, Alternando Cabina / Denver Colorado
+              90&apos;s.
+            </li>
           </ul>
         </AccordionContent>
       </AccordionItem>

@@ -26,7 +26,12 @@ export default function PageRedes() {
       url: "https://www.tiktok.com/@jesuspulido875?is_from_webapp=1&sender_device=pc",
       color: "hover:text-purple-400",
     },
-    { name: "YouTube", icon: "Youtube", url: "#", color: "hover:text-red-400" },
+    {
+      name: "YouTube",
+      icon: "Youtube",
+      url: "https://www.youtube.com/@djjesuspulido900",
+      color: "hover:text-red-400",
+    },
   ];
   const contactInfo = [
     {
