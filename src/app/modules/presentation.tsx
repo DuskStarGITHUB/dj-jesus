@@ -22,7 +22,6 @@ const Presentation = ({ onDisappear }: { onDisappear?: () => void }) => {
     );
     return () => clearInterval(interval);
   }, []);
-
   useEffect(() => {
     const duration = 2000;
     const steps = 60;

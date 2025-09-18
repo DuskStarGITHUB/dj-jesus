@@ -35,8 +35,8 @@ export function Accord({
         </AccordionTrigger>
         <AccordionContent>
           <p className="text-sm sm:text-inherit leading-relaxed sm:leading-normal">
-            Naciendo en la epoca de los 70/80's, Adquiri un gusto musical en
-            español e ingles, Desde siempre, me llamo la atencion, Integrar e
+            Naciendo en la epoca de los 70/80&apos;s, Adquiri un gusto musical
+            en español e ingles, Desde siempre, me llamo la atencion, Integrar e
             Combinar diferentes generos musicales, Admirando la cultura de la
             mezcla con vinilos y implementacion de equipo de DJ.
           </p>
@@ -48,7 +48,7 @@ export function Accord({
         </AccordionTrigger>
         <AccordionContent>
           <ul className="list-disc pl-5 space-y-1 text-sm sm:text-inherit leading-relaxed sm:leading-normal">
-            <li>DJ RomixSaurio || CDMX, Alternando Cabina / D.C 90's.</li>
+            <li>DJ RomixSaurio || CDMX, Alternando Cabina / D.C 90&apos;s.</li>
           </ul>
         </AccordionContent>
       </AccordionItem>
@@ -58,10 +58,10 @@ export function Accord({
         </AccordionTrigger>
         <AccordionContent>
           <p className="text-sm sm:text-inherit leading-relaxed sm:leading-normal">
-            En los 90's tuve mi sonido nombrado DenverMix, Actualmente Tengo mi
-            propio equipo de Audio,Sonido,Iluminacion y Video en las CDMX para
-            Eventos Sociales a los que e asistido e Versatiles, Me especializo
-            en fiestas tematicas de los años 80/90's.
+            En los 90&apos;s tuve mi sonido nombrado DenverMix, Actualmente
+            Tengo mi propio equipo de Audio,Sonido,Iluminacion y Video en las
+            CDMX para Eventos Sociales a los que e asistido e Versatiles, Me
+            especializo en fiestas tematicas de los años 80/90&apos;s.
           </p>
         </AccordionContent>
       </AccordionItem>
