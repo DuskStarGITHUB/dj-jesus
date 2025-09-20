@@ -140,7 +140,7 @@ export default function PageContacto() {
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:3000/contacto"
+            value="https://foreveryoungdjmx.studio/"
           />
         </form>
       </section>

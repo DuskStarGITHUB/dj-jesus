@@ -91,7 +91,7 @@ const Presentation = ({ onDisappear }: { onDisappear?: () => void }) => {
             >
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-montserrat font-bold mb-4 leading-tight">
                 Vive La Gran Experiencia{" "}
-                <span className="block text-primary">Musica que se Siente</span>
+                <span className="block text-primary">de la Fiesta</span>
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Servicios profesionales de DJ que unen a todas las edades en la
