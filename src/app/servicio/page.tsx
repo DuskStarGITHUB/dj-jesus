@@ -14,6 +14,7 @@ const paquetes = [
       "Luces LED baño de color",
       "Micrófono",
       "DJ mezclando en vivo",
+      "4hrs de servicio",
     ],
     img: "https://wallpapers.com/images/hd/black-and-white-dj-music-equipment-doceza5wiwhfzeel.jpg",
   },
@@ -27,6 +28,7 @@ const paquetes = [
       "2 luces robóticas spot",
       "Micrófono",
       "DJ mezclando en vivo",
+      "5hrs de servicio",
     ],
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyQ2ghCmYgvlfycM5_gwEiFAH3-7pRxKDy1Q&s",
   },
@@ -42,6 +44,7 @@ const paquetes = [
       "Micrófono",
       "Cámara de humo",
       "DJ mezclando en vivo",
+      "5hrs de servicio",
     ],
     img: "https://png.pngtree.com/thumb_back/fh260/background/20220120/pngtree-dj-ibiza-ibiza-music-dj-blanco-y-negro-photo-image_2654205.jpg",
   },
@@ -59,6 +62,7 @@ const paquetes = [
       "Micrófono",
       "Cámara de humo",
       "DJ mezclando en vivo",
+      "5hrs de servicio",
     ],
     img: "https://www.shutterstock.com/image-photo/black-white-confetti-silhouette-crowd-600nw-458794543.jpg",
   },
@@ -101,8 +105,8 @@ export default function PageServicio() {
               <CardTitle>Mezcla de Vinilos</CardTitle>
             </CardHeader>
             <CardContent>
-              Puedes mezclar vinilos clásicos con música digital, creando
-              transiciones únicas.
+              Mezclar vinilos clásicos con música digital, creando transiciones
+              únicas.
             </CardContent>
           </Card>
           <Card className="p-4 scroll-animate opacity-0">
