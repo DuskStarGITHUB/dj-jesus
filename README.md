@@ -1,1 +1,29 @@
-Repository Private
+
+<img width="1873" height="979" alt="Captura de pantalla_20250928_160826" src="https://github.com/user-attachments/assets/6558bb52-e6ca-4afa-a512-51b8d0a12553" />
+
+
+Derechos Reservados
+
+¡Atención! Este repositorio está protegido por derechos reservados. Todos los derechos sobre el código, documentos, diseños, ideas y cualquier otro contenido alojado en este repositorio son propiedad exclusiva del autor.
+
+Restricciones de Uso
+
+Prohibido Copiar: Ningún contenido de este repositorio puede ser copiado, replicado o utilizado en forma alguna sin el permiso expreso por escrito del autor.
+
+Prohibido Modificar: La alteración o modificación de cualquier contenido alojado en este repositorio está estrictamente prohibida.
+
+Prohibido Distribuir: Ningún material de este repositorio puede ser distribuido, compartido o publicado en ninguna plataforma, ya sea para propósitos privados, comerciales o públicos, sin autorización previa.
+
+Prohibido Uso Público o Privado: El uso del contenido para proyectos públicos o privados sin autorización está expresamente prohibido.
+
+Prohibido el Uso Comercial: Cualquier intento de monetizar, revender o explotar el contenido de este repositorio sin autorización constituirá una violación de los derechos del autor.
+
+Aviso Legal
+
+Este repositorio está protegido por las leyes de derechos de autor aplicables. Cualquier infracción a estas restricciones podrá dar lugar a acciones legales, incluidas, entre otras, reclamaciones por daños y perjuicios, así como sanciones penales en las jurisdicciones correspondientes.
+
+El autor se reserva todos los derechos que no hayan sido concedidos de manera expresa en este documento.
+
+Contacto para Permisos
+
+Si desea solicitar un permiso especial para utilizar el contenido de este repositorio, comuníquese directamente con el autor mediante los datos de contacto proporcionados en este perfil o en la documentación correspondiente.
