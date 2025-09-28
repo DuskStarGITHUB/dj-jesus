@@ -1,6 +1,7 @@
 
 <img width="1873" height="979" alt="Captura de pantalla_20250928_160826" src="https://github.com/user-attachments/assets/6558bb52-e6ca-4afa-a512-51b8d0a12553" />
 
+NO ROBAR INFORMACION SIN AUTORIZACION
 
 Derechos Reservados
 
